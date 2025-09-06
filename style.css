@@ -1,0 +1,131 @@
+/*Elimina los espacios por defecto*/
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+/*Define la tipografia y la separacion entre las lineas*/
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+}
+/*Color de fondo, texto*/
+header {
+  background: #000;
+  color: #fff;
+  padding: 1em 2em;
+  position: sticky;
+  top: 0;
+}
+/*Organiza el logo y el menu*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*El Menú horizontal con espacios*/
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+/*Estilos para el Menú*/
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+/*Imagen Principal*/
+.hero {
+  background: url("imagenes/Fondo_Home.jpg") no-repeat center center/cover;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+/*Ajusta la Opacidad de la pagina (Overlay)*/
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* ajusta la opacidad */
+}
+/* Para que el texto quede sobre el overlay (opacidad)*/
+.hero-text {
+  position: relative;
+  z-index: 1; 
+}
+/*Ajusta el Tamaño de Nueva Colección 2025*/
+.hero-text h1 {
+  font-size: 3em;
+}
+/*Estilo del Boton ver producto de Home*/
+.btn {
+  display: inline-block;
+  margin-top: 1em;
+  padding: 10px 20px;
+  background: #db0d0d;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Centra el texto*/
+.productos {
+  padding: 2em;
+  text-align: center;
+}
+/*La fila del Grid (Indice de organizacion)*/
+.grid {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  margin-top: 1em;
+}
+/*Para separar y dar borde y espacio*/
+.producto {
+  border: 1px solid #ddd;
+  padding: 1em;
+  width: 200px;
+}
+/*Evita que la imagen se desforme*/
+.producto img {
+  max-width: 100%;
+}
+
+/* Footer pie de la página */
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 2em 1em;
+  margin-top: 2em;
+}
+footer .logo {
+  font-family: 'Georgia', serif; 
+  font-size: 28px;
+  margin-bottom: 0.5em;
+  color: #c97c7c; /* color de tu marca */
+}
+
+footer .social a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer .social a:hover {
+  color: #c97c7c; /* cambia color al pasar el mouse */
+}
+
+/*Estilo de el Logo*/
+.logo {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #c97c7c;
+  text-transform: uppercase;
+}
